@@ -6,13 +6,13 @@ namespace DotJokes.Tests
         [TestMethod]
         public async Task PingReturnTrue()
         {
-            bool? pingSucces = (await new JokesManager().PingAsync())?.PingSucces;
+            bool? pingSucces = (await new JokesManager().PingAsync()).PingSucces;
             Assert.IsTrue(pingSucces);
         }
         [TestMethod]
         public async Task Info()
         {
-            string? version = (await new JokesManager().GetInfoAsync())?.Version;
+            string? version = (await new JokesManager().GetInfoAsync()).Version;
             Assert.IsNotNull(version);
         }
     }
